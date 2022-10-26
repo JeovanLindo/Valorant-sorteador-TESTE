@@ -560,7 +560,7 @@ main {
         }
 
         main {
-            gap: 400px;
+            gap: 350px;
         }
 
         #principal {
@@ -586,7 +586,9 @@ main {
                 width: 100%;
                 min-width: 330px;
 
-                height: 550px;
+                height: fit-content;
+                min-height: 250px;
+                max-height: 550px;
             }
             
                 #grupo-jogadores p {
