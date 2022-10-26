@@ -1,0 +1,623 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+/* font-family: 'Staatliches', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+
+:root { 
+    /* palleta */
+    --vermelho : #FD4556;
+    --vermelho-escuro : #53212B;
+    --verde : #00FE75;
+    --preto : #101010;    
+    --cinza : #1C1C1B;
+    --preto-azulado : #20262E;
+
+    /* fonte */
+    --fonte-principal : 'Staatliches', cursive;
+    --fonte-secundaria : 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* margem vermelha */
+
+html {
+    height: fit-content;
+    width: 100vw;
+    background-color: var(--preto);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+body {
+    height: 100%;
+    width: 100vw;
+
+    box-shadow: inset 0px 0px 1px 6px var(--vermelho);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---- margem vermelha ---- */
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #titulo h1 {
+        height: 65px;
+
+        color: var(--vermelho);
+
+        font-family: var(--fonte-principal);
+        font-size: 65px;
+    }
+
+    #titulo p {
+        color: var(--vermelho-escuro);
+
+        font-family: var(--fonte-principal);
+        font-size: 27px;
+    }
+
+/* ---- header ---- */
+
+/* main */
+
+main {
+    width: 100%;
+    height: fit-content;
+
+    padding: 80px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 160px;
+}
+
+    /* section principal */
+
+    #principal {
+        max-width: 1920px;
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #container-jogadores {
+        max-width: 1170px;
+        width: 100%;
+        height: 600px;      
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #add-player {
+        height: 100%;
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 41px;
+    }
+
+        #titulo-add h2{
+            color: white;
+
+            font-family: var(--fonte-principal);
+            font-size: 46px;
+
+            border-bottom: 5px solid var(--vermelho);
+        }
+
+        #jogadores-add textarea {
+            width: 435px;
+            height: 402px; 
+            resize: none;
+
+            color: rgb(78, 78, 78);
+
+            font-size: 28px;
+            font-family: var(--fonte-secundaria);
+            font-weight: 400;
+
+            padding: 20px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        #jogadores-add textarea:focus {
+            outline: 3px solid var(--vermelho);
+        }
+
+        #button-add input {
+            width: 150px;
+            height: 50px;
+
+            background-color: var(--verde);
+            color: var(--preto);
+
+            font: 600 20px var(--fonte-secundaria);
+            
+            border: none;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        #button-add input:hover {
+            background-color: var(--preto-azulado);
+            color: white;
+            transition: .2s;
+        } 
+
+        #button-add input:active {
+            background-color: var(--preto);
+            color: white;
+            transition: .2s;
+        }
+
+
+    #player-list {
+        height: 100%;
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 41px;
+    }
+     
+        #jogadores-adicionados {
+            width: 494px;
+            height: 596px;
+
+            padding: 20px;
+
+            background-color: var(--cinza);
+            border: 3px solid var(--verde);
+        }
+
+        #grupo-jogadores {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        #grupo-jogadores p {
+            width: 171px;
+            min-width: 171px;
+            height: 50px;
+
+            font-family: var(--fonte-secundaria);
+            font-size: 17px;
+
+            background-color: var(--vermelho-escuro);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 7px;
+
+            border-radius: 10px;
+
+            gap: 1px;
+        }
+
+        #grupo-jogadores p::after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            content: url(../Assets/icons/x.svg);
+        }
+
+        #grupo-jogadores img {
+            height: 30px;
+            width: 30px;
+        }
+
+        #button-gerar button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            gap: 2px;
+
+            width: 280px;
+            height: 68px;
+
+            background-color: var(--vermelho);
+
+            border: none;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        #button-gerar p {
+            height: 40px;
+
+            color: white;
+
+            font-family: var(--fonte-principal);
+            font-size: 40px;
+            transition: .2s;
+        }
+
+        #button-gerar span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+
+            font-weight: 400;
+            font-family: var(--fonte-secundaria);
+            font-size: 15px;
+
+            opacity: 70%;
+            transition: .2s;
+        }
+
+        #button-gerar svg {
+            height: 23px;
+            width: 23px;
+            transition: .2s;
+        }
+
+        /* button hover */
+
+        #button-gerar button:hover {
+            background-color: rgb(224, 220, 211);
+            transition: .2s;
+        }
+
+        #button-gerar:hover p{
+            color: var(--preto-azulado);
+            transition: .2s;
+        }
+
+        
+        #button-gerar:hover span{
+            color: var(--preto-azulado);
+            transition: .2s;
+        }
+
+
+        #button-gerar:hover svg {
+            stroke: var(--preto-azulado);
+            transition: .2s;
+        }
+
+        /* ---- button hover ---- */
+
+        /* button active */
+
+        #button-gerar button:active {
+            background-color: black;
+            transition: .2s;
+        }
+
+        #button-gerar:active p{
+            color: white;
+            transition: .2s;
+        }
+
+        
+        #button-gerar:active span{
+            color: white;
+            transition: .2s;
+        }
+
+        #button-gerar:active svg {
+            stroke: white;
+            transition: .2s;
+        }
+
+        /* ---- button active ---- */
+
+    /* ---- section principal ---- */
+
+
+    /* section fazemos */
+
+    #fazemos {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #container-fazemos {
+        height: fit-content;
+        max-width: 1170px;
+        width: 100%;
+
+
+        gap: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+        #titulo-fazemos h2 {
+            height: 60px;
+
+            color: white;
+
+            border-bottom: 3px solid var(--vermelho);
+
+            font-family: var(--fonte-principal);
+            font-size: 45px;
+        }
+
+        #cards {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 57px;
+        }
+
+            #times {
+                height: 394px;
+                width: 352px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(38.89deg, rgba(199, 52, 66, 0.7) 1.96%, rgba(0, 0, 0, 0.35) 102.38%), url(../Assets/images/player.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 620px;
+
+                border-radius: 20px;
+                border: 6px solid var(--vermelho);
+
+                transition: .8s;
+
+                cursor: pointer;
+            }
+
+            #times:hover {
+                background-size: 750px;
+
+                transition: .8s;
+            }
+
+                #titulo-times h3{
+                    color: white;
+
+                    font-family: var(--fonte-secundaria);
+                    font-size: 40px;
+
+                    border-bottom: 2px solid var(--vermelho);
+
+                    transition: .8s;
+                }
+
+                #times:hover > #titulo-times h3 {
+                    font-size: 30px;
+                    transition: .8s;
+                }
+
+            #agentes {
+                height: 394px;
+                width: 352px;
+
+                margin-bottom: -100px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(38.89deg, rgba(199, 52, 66, 0.7) 1.96%, rgba(0, 0, 0, 0.35) 102.38%), url(../Assets/images/agent.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 700px;
+
+                border-radius: 20px;
+                border: 6px solid var(--vermelho);
+
+                transition: .8s;
+
+                cursor: pointer;
+            }
+
+            #agentes:hover {
+                background-size: 850px;
+
+                transition: .8s;
+            }
+
+                #titulo-agentes h3{
+                    color: white;
+
+                    font-family: var(--fonte-secundaria);
+                    font-size: 40px;
+
+                    border-bottom: 2px solid var(--vermelho);
+
+                    transition: .8s;
+                }
+
+                #agentes:hover > #titulo-agentes h3 {
+                    font-size: 30px;
+                    transition: .8s;
+                }
+
+
+            #mapas {
+                height: 394px;
+                width: 352px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(38.89deg, rgba(199, 52, 66, 0.7) 1.96%, rgba(0, 0, 0, 0.35) 102.38%), url(../Assets/images/mapa.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 700px;
+
+                border-radius: 20px;
+                border: 6px solid var(--vermelho);
+
+                transition: .8s;
+
+                cursor: pointer;
+            }
+
+            #mapas:hover {
+                background-size: 850px;
+
+                transition: .8s;
+            }
+
+                #titulo-mapas h3{
+                    color: white;
+
+                    font-family: var(--fonte-secundaria);
+                    font-size: 40px;
+
+                    border-bottom: 2px solid var(--vermelho);
+
+                    transition: .8s;
+                }
+
+                #mapas:hover > #titulo-mapas h3 {
+                    font-size: 30px;
+                    transition: .8s;
+                }
+    /* ---- section fazemos ---- */
+
+
+    /* media queries */
+    
+    @media screen and (max-width: 1250px) {
+        body {
+            gap: 200px;
+        }
+
+        main {
+            gap: 400px;
+        }
+
+        #principal {
+            height: fit-content;
+        }
+
+        #container-jogadores {
+            display: flex;
+            flex-direction: column;
+
+            gap: 40px;
+        }
+
+            #jogadores-add textarea {
+                width: 100%;
+                min-width: 330px;
+
+                height: 300px;
+                min-height: 300px;
+            }
+
+            #jogadores-adicionados {
+                width: 100%;
+                min-width: 330px;
+
+                height: 550px;
+            }
+            
+                #grupo-jogadores p {
+                    width: 140px;
+                    min-width: 140px;
+                    height: 30px;
+
+                    font-size: 14px;
+                }
+
+    
+
+
+            #cards {
+                flex-direction: column;
+            }
+
+                #times {
+                    width: 50%;
+                    min-width: 300px;
+                }
+
+
+                #agentes {
+                    width: 50%;
+                    min-width: 300px;
+
+                    margin: 0;
+                }
+
+                #mapas {
+                    width: 50%;
+                    min-width: 300px;
+                }
+    }
+
+    /* media queries */
+
+/* ---- main ---- */
