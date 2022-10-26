@@ -550,7 +550,12 @@ main {
     /* media queries */
     
     @media screen and (max-width: 1250px) {
+        html {
+            padding: 15px;
+        }
+      
         body {
+            box-shadow: inset 0px 0px 1px 3px var(--vermelho);
             gap: 200px;
         }
 
