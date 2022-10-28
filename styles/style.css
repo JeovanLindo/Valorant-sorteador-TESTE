@@ -33,7 +33,6 @@
 
 html {
     height: fit-content;
-    width: 100vw;
     background-color: var(--preto);
 
     display: flex;
@@ -85,10 +84,7 @@ header {
 
         font-family: var(--fonte-principal);
         font-size: 65px;
-<<<<<<< Updated upstream
-=======
         font-weight: 400;
->>>>>>> Stashed changes
     }
 
     #titulo p {
@@ -103,22 +99,24 @@ header {
 /* nav */
 
 nav {
-    height: fit-content;
-    width: fit-content;
+    height: 20px;
+    width: 97%;
 
     position: absolute;
     top: 6px;
     left: 6px;
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
 
     border-radius: 20px;
 
     padding: 20px 20px;
 
     background-color: var(--preto);
+    transition: .4s;
 }
 
 
@@ -126,7 +124,7 @@ nav ul{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 25px;
 }
 
     #menu {
@@ -251,15 +249,10 @@ main {
 
             font-family: var(--fonte-principal);
             font-size: 46px;
-<<<<<<< Updated upstream
-
-            border-bottom: 5px solid var(--vermelho);
-=======
             font-weight: 400;
 
             border-bottom: 5px solid var(--vermelho);
 
->>>>>>> Stashed changes
         }
 
         #jogadores-add textarea {
@@ -433,28 +426,16 @@ main {
         }
 
         #button-gerar:hover p{
-<<<<<<< Updated upstream
             color: var(--preto-azulado);
             transition: .2s;
         }
 
         
         #button-gerar:hover span{
-=======
->>>>>>> Stashed changes
             color: var(--preto-azulado);
             transition: .2s;
         }
 
-<<<<<<< Updated upstream
-=======
-        
-        #button-gerar:hover span{
-            color: var(--preto-azulado);
-            transition: .2s;
-        }
-
->>>>>>> Stashed changes
 
         #button-gerar:hover svg {
             stroke: var(--preto-azulado);
@@ -581,11 +562,7 @@ main {
                 }
 
                 #times:hover > #titulo-times h3 {
-<<<<<<< Updated upstream
-                    font-size: 30px;
-=======
                     font-size: 35px;
->>>>>>> Stashed changes
                     transition: .8s;
                 }
 
@@ -733,13 +710,9 @@ main {
                 }
 
     
-<<<<<<< Updated upstream
-
-=======
         #container-fazemos {
             background-size: 100%;
         }        
->>>>>>> Stashed changes
 
             #cards {
                 flex-direction: column;
@@ -799,7 +772,10 @@ main {
             }
 
             nav.active {
-                width: 90%;
+                width: 97%;
+                height: 400px;
+
+                transition: .4s;
             }
 
             nav.active #hamburguer {
@@ -837,12 +813,6 @@ main {
                 transition: .4s;
             }
 
-            nav.active #menu {
-                width: fit-content;
-                height: 100%;
-
-                transition: .4s;
-            }
 
             nav.active ul {
                 display: flex;
