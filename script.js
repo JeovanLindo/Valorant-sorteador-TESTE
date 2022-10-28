@@ -1,3 +1,4 @@
+// menu dinâmico mobile 
 
 const btnMobile = window.document.querySelector ('#btn-mobile')
 
@@ -17,3 +18,5 @@ function toggleMenu(event) {
         event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
     }
 }
+
+// ---- menu dinamico mobile ----

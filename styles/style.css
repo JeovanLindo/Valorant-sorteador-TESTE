@@ -100,22 +100,24 @@ header {
 
 nav {
     height: 20px;
-    width: 97%;
+    width: fit-content;
 
-    position: absolute;
-    top: 6px;
-    left: 6px;
+    position: fixed;
+
+    top: 34px;
+    left:34px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: 25px;
 
     border-radius: 20px;
 
-    padding: 20px 20px;
+    padding: 20px 0px;
 
-    background-color: var(--preto);
+    background-color: transparent;
     transition: .4s;
 }
 
@@ -127,22 +129,16 @@ nav ul{
     gap: 25px;
 }
 
-    #menu {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        height: 0px;
-
-        transition: .4s;
-    }
-
     ul a {
         display: flex;
         align-items: center;
 
         text-decoration: none;
-        color: white;
+        color: rgba(255, 255, 255, 0.623);
+    }
+
+    #configuracao p {
+        color: var(--vermelho-escuro);
     }
 
     .icons {
@@ -154,6 +150,8 @@ nav ul{
         
         font-family: var(--fonte-secundaria);
         font-size: 16px;
+
+        transition: .4s;
     } 
 
 
@@ -169,9 +167,22 @@ nav ul{
     }
 
     .icons p {
-        display: block;
-        visibility: hidden;
+        font-size: 16px;
+
+        
+        opacity: 0%;
+
+        transition: .4s;
     }
+
+    .icons:hover p {
+        font-size: 19px;
+
+        opacity: 100%;
+
+        transition: .4s;
+    }
+    
 
     .icons:hover img {
         height: 30px;
@@ -181,11 +192,7 @@ nav ul{
         transition: .4s;
     }
 
-    .icons:hover p {
-        font-size: 19px;
-
-        transition: .4s;
-    }
+    
 
     #btn-mobile {
         display: none;
@@ -711,11 +718,12 @@ main {
 
     
         #container-fazemos {
-            background-size: 100%;
+            background: none;
         }        
 
             #cards {
                 flex-direction: column;
+    
             }
 
                 #times {
@@ -738,42 +746,30 @@ main {
 
 
 
-            #btn-mobile {
-                display: flex;
 
-                padding: .5rem 1rem ;
 
-                font-size: 1rem;
+           
 
-                border: none;
 
-                background: none;
-
-                cursor: pointer;
-            }    
-
-            #hamburguer {
-                width: 20px;
-                transition: .4s;
-
-                border-top: 2px solid var(--vermelho);
-            }
-
-            #hamburguer::after, #hamburguer::before {
-                width: 20px;
-                height: 2px;
-                background-color: var(--vermelho);
-
-                content: '';
-
-                display: block;
-
-                margin-top: 5px;
-            }
+        nav {
+            left: 20px;
+        }
 
             nav.active {
-                width: 97%;
+                width : 300px;
                 height: 400px;
+                padding: 20px;
+
+                z-index: 2000;
+
+                background-color: var(--preto);
+
+                transition: .4s;
+            }
+
+
+            #hamburguer::before, #hamburguer::after {
+                transform: rotate(0deg);
 
                 transition: .4s;
             }
@@ -806,6 +802,7 @@ main {
                 flex-direction: column;
                 align-items: flex-start;
 
+
                 height: 0px;
 
                 overflow-y: hidden;
@@ -827,8 +824,47 @@ main {
                 align-items: center;
             }
 
+            #btn-mobile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: .5rem 1rem ;
+
+                font-size: 1rem;
+
+                border: none;
+
+                background: var(--preto);
+                border-radius: 10px;
+                padding: 20px 15px;
+
+                box-sizing: content-box;
+
+                cursor: pointer;
+            }    
+
+            #hamburguer {
+                width: 20px;
+                transition: .4s;
+
+                border-top: 2px solid var(--vermelho);
+            }
+
+            #hamburguer::after, #hamburguer::before {
+                width: 20px;
+                height: 2px;
+                background-color: var(--vermelho);
+
+                content: '';
+
+                display: block;
+
+                margin-top: 5px;
+            }
+
             .icons p {
-                visibility: visible;
+                opacity: 100%;
             }
     }
 
