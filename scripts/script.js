@@ -5,19 +5,30 @@ const AGENTS = [
     'Yoru', 'Astra', 'KAY/O', 'Phoenix',
     'Raze', 'Brimstone', 'Jett', 'Sage',
     'Viper', 'Breach', 'Cypher', 'Sova',
-    'Omen', 'Reyna', 'Killjoy'
+    'Omen', 'Reyna', 'Killjoy', 'Harbor'
 ]
 
 const MAPS = [
-    /* Ascent = { // fazer function factory
-        name: 'Ascent',
-        pic: 'linkdafoto'
-    }, */
     'Ascent', 'Bind', 'Breeze', 'Fracture',
     'Haven', 'Icebox', 'Pearl', 'Split'
 ]
 
 const PLAYERS = []
+
+
+function testeMapas() {
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 // FUNÇÕES
 
@@ -35,7 +46,7 @@ function insertPlayer(playerArray = []) {
     console.log(PLAYERS)
 
     playerArray.forEach(name => {
-        if (isPresent(name) === true) {
+        if (!!isPresent(name)) {
             // verifica se o jogador está presente
             console.log('Jogador já presente!')
 
