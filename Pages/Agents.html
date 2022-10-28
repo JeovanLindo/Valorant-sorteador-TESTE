@@ -52,7 +52,7 @@
                     </a>
                 </li><!-- agentes-menu -->
                 <li id="mapas-menu" class="icons" >
-                    <a href="">
+                    <a target="_self" href="../Pages/Maps.html">
                         <img src="../Assets/icons/globe.svg" alt="ícone de mapa">
                         <p>Sorteador de mapas</p>
                     </a>
@@ -68,29 +68,112 @@
                 <div id="add-player">
     
                     <div id="titulo-add">
-                        <h2>JOGADORES</h2>
+                        <h2>AGENTES</h2>
                     </div><!-- titulo-add -->
                     <div id="jogadores-add">
-                        <textarea name="players-add" autofocus id="players-add" cols="30" rows="10" placeholder="Separe cada jogador por quebra de linha!"></textarea>
+                        <textarea name="players-add" autofocus id="players-add" cols="30" rows="10" placeholder="Digite o nome do jogador !!"></textarea>
+
+                        <div id="selecao-agentes">
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Astra_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Breach_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Brimstone_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Chamber_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Cypher_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Fade_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Harbor_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Jett_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/KAYO_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Killjoy_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Neon_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Omen_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Phoenix_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Raze_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Reyna_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Sage_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Skye_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Sova_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Viper_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                            <div class="agente-selecionado">
+                                <img src="../Assets/images/agents/Yoru_icon.png" alt="">
+                            </div><!-- agente-selecionado -->
+                        </div><!-- selecao-agentes -->
                     </div><!-- jogadores-add -->
                     <div id="button-add">
-                        <input type="button" value="ADICIONAR">
+                        <input type="button" value="SORTEAR">
                     </div><!-- button-add -->
                 </div><!-- add-player -->
 
 
                 <div id="player-list">
+                    <div id="titulo-list">
+                        <h2>LISTA DE SORTEIO</h2>
+                    </div><!-- titulo-list -->
                     <div id="jogadores-adicionados">
                         <div id="grupo-jogadores">
-                            <p>Jogador</p>
-                            <p>Jogador</p>
-                            <p>Jogador</p>
+                            
+                            <div id="resultado">
+                                <p>eudecalçapretassona</p>
+                                <span>Chamber</span>
+                            </div><!-- resultado -->
+                            <div id="resultado">
+                                <p>L0RDEJR</p>
+                                <span>Raze</span>
+                            </div><!-- resultado -->
+                            <div id="resultado">
+                                <p>DenisBond</p>
+                                <span>Phoenix</span>
+                            </div><!-- resultado -->
+                            <div id="resultado">
+                                <p>Mendel</p>
+                                <span>Jett</span>
+                            </div><!-- resultado -->
+                                
                             
                         </div><!-- grupo-jogadores-nomes -->
                     </div><!--jogadores-adicionados-->
-                    <div id="button-gerar">
+
+                    
+                    <!-- <div id="button-gerar">
                         <button>
-                            <p>GERAR TIMES</p>
+                            <p>GERAR AGENTES</p>
                             <div id="button-gerar-limite">
                                 <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-triangle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -99,7 +182,9 @@
                                   </svg> Mínimo de 2 jogadores</span>
                             </div>
                         </button>
-                    </div>
+                    </div> -->
+
+
                 </div><!-- player-list -->
             </div><!-- container-jogadores -->
         </section><!-- principal -->
