@@ -47,6 +47,8 @@ body {
     height: 100%;
     width: 100vw;
 
+    position: relative;
+
     box-shadow: inset 0px 0px 1px 6px var(--vermelho);
     border-radius: 20px;
 
@@ -83,6 +85,10 @@ header {
 
         font-family: var(--fonte-principal);
         font-size: 65px;
+<<<<<<< Updated upstream
+=======
+        font-weight: 400;
+>>>>>>> Stashed changes
     }
 
     #titulo p {
@@ -93,6 +99,104 @@ header {
     }
 
 /* ---- header ---- */
+
+/* nav */
+
+nav {
+    height: fit-content;
+    width: fit-content;
+
+    position: absolute;
+    top: 6px;
+    left: 6px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 20px;
+
+    padding: 20px 20px;
+
+    background-color: var(--preto);
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        height: 0px;
+
+        transition: .4s;
+    }
+
+    ul a {
+        display: flex;
+        align-items: center;
+
+        text-decoration: none;
+        color: white;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+        
+        font-family: var(--fonte-secundaria);
+        font-size: 16px;
+    } 
+
+
+    .icons img {
+        width: 24px;
+        height: 24px;
+
+        cursor: pointer;
+        box-sizing: content-box;
+        padding: 14px;
+
+        transition: .4s;
+    }
+
+    .icons p {
+        display: block;
+        visibility: hidden;
+    }
+
+    .icons:hover img {
+        height: 30px;
+        width: 30px;
+
+
+        transition: .4s;
+    }
+
+    .icons:hover p {
+        font-size: 19px;
+
+        transition: .4s;
+    }
+
+    #btn-mobile {
+        display: none;
+        width: 25px;
+    }
+    
+
+/* ---- nav ---- */
+
 
 /* main */
 
@@ -147,8 +251,15 @@ main {
 
             font-family: var(--fonte-principal);
             font-size: 46px;
+<<<<<<< Updated upstream
 
             border-bottom: 5px solid var(--vermelho);
+=======
+            font-weight: 400;
+
+            border-bottom: 5px solid var(--vermelho);
+
+>>>>>>> Stashed changes
         }
 
         #jogadores-add textarea {
@@ -211,7 +322,7 @@ main {
      
         #jogadores-adicionados {
             width: 494px;
-            height: 596px;
+            height: 480px;
 
             padding: 20px;
 
@@ -231,12 +342,12 @@ main {
         }
 
         #grupo-jogadores p {
-            width: 171px;
-            min-width: 171px;
-            height: 50px;
+            width: 180px;
+            min-width: 150px;
+            height: 30px;
 
             font-family: var(--fonte-secundaria);
-            font-size: 17px;
+            font-size: 16px;
 
             background-color: var(--vermelho-escuro);
             color: white;
@@ -322,16 +433,28 @@ main {
         }
 
         #button-gerar:hover p{
+<<<<<<< Updated upstream
             color: var(--preto-azulado);
             transition: .2s;
         }
 
         
         #button-gerar:hover span{
+=======
+>>>>>>> Stashed changes
             color: var(--preto-azulado);
             transition: .2s;
         }
 
+<<<<<<< Updated upstream
+=======
+        
+        #button-gerar:hover span{
+            color: var(--preto-azulado);
+            transition: .2s;
+        }
+
+>>>>>>> Stashed changes
 
         #button-gerar:hover svg {
             stroke: var(--preto-azulado);
@@ -386,11 +509,16 @@ main {
         width: 100%;
 
 
-        gap: 120px;
+        gap: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        background: linear-gradient(0deg, #101010 , #10101088), url(../Assets/images/valorant.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
     }
 
         #titulo-fazemos h2 {
@@ -402,6 +530,7 @@ main {
 
             font-family: var(--fonte-principal);
             font-size: 45px;
+            font-weight: 400;
         }
 
         #cards {
@@ -452,7 +581,11 @@ main {
                 }
 
                 #times:hover > #titulo-times h3 {
+<<<<<<< Updated upstream
                     font-size: 30px;
+=======
+                    font-size: 35px;
+>>>>>>> Stashed changes
                     transition: .8s;
                 }
 
@@ -600,7 +733,13 @@ main {
                 }
 
     
+<<<<<<< Updated upstream
 
+=======
+        #container-fazemos {
+            background-size: 100%;
+        }        
+>>>>>>> Stashed changes
 
             #cards {
                 flex-direction: column;
@@ -623,6 +762,104 @@ main {
                     width: 50%;
                     min-width: 300px;
                 }
+
+
+
+            #btn-mobile {
+                display: flex;
+
+                padding: .5rem 1rem ;
+
+                font-size: 1rem;
+
+                border: none;
+
+                background: none;
+
+                cursor: pointer;
+            }    
+
+            #hamburguer {
+                width: 20px;
+                transition: .4s;
+
+                border-top: 2px solid var(--vermelho);
+            }
+
+            #hamburguer::after, #hamburguer::before {
+                width: 20px;
+                height: 2px;
+                background-color: var(--vermelho);
+
+                content: '';
+
+                display: block;
+
+                margin-top: 5px;
+            }
+
+            nav.active {
+                width: 90%;
+            }
+
+            nav.active #hamburguer {
+                border-top: transparent;
+                transition: .4s;
+
+                transition: .4s;
+            }
+
+            nav.active #hamburguer::before {
+                transform: rotate(135deg);
+                transition: .4s;
+                position: relative;
+
+                bottom: -3.5px;
+            }
+
+            nav.active #hamburguer::after {
+                transform: rotate(-135deg);
+                position: relative;
+                transition: .4s;
+
+                top: -3.5px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                height: 0px;
+
+                overflow-y: hidden;
+
+                transition: .4s;
+            }
+
+            nav.active #menu {
+                width: fit-content;
+                height: 100%;
+
+                transition: .4s;
+            }
+
+            nav.active ul {
+                display: flex;
+                align-items: flex-start;
+                height: 280px;
+
+                transition: .4s;
+            }
+
+            nav.active a {
+                display: flex;
+                align-items: center;
+            }
+
+            .icons p {
+                visibility: visible;
+            }
     }
 
     /* media queries */
