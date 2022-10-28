@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!-- link css -->
+    <link rel="stylesheet" href="../styles/Players.css">
+<!-- link css -->
+<!-- Link js -->
+    <script defer src="../Scripts/Players.js"></script>
+<!-- Link js -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores</title>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <h1>Scrim.gg</h1>
+            <p>Valorant / Jogadores</p>
+        </div><!-- titulo -->
+    </header>
+
+    <nav>
+        
+            <button id="btn-mobile" >
+                <span id="hamburguer"></span>
+            </button>
+            <ul>
+                <li id="configuracao" class="icons">
+                    <img src="../Assets/icons/settings.svg" alt="ícone de configuração">
+                    <p>Configurações</p>
+                </li><!-- configuracao -->
+
+                <li id="inicio-menu" class="icons"> 
+                    <a target="_self" href="../index.html">
+                        <img src="../Assets/icons/home.svg" alt="Ícone de página principal">
+                        <p>Início</p>
+                    </a>
+                </li><!-- inicio-menu -->
+
+                <li id="jogadores-menu" class="icons Selecionado">
+                    <a target="_self" href="../Pages/Players.html">
+                        <img src="../Assets/icons/users.svg" alt="ícone de jogadores">
+                        <p>Sorteador de jogadores</p>
+                    </a>
+                </li><!-- jogadores-menu -->
+                
+                <li id="agentes-menu" class="icons">
+                    <a target="_self" href="../Pages/Agents.html">
+                        <img src="../Assets/icons/user.svg" alt="ícone de agentes">
+                        <p>Sorteador de agentes</p>
+                    </a>
+                </li><!-- agentes-menu -->
+                <li id="mapas-menu" class="icons" >
+                    <a href="">
+                        <img src="../Assets/icons/globe.svg" alt="ícone de mapa">
+                        <p>Sorteador de mapas</p>
+                    </a>
+                </li><!-- mapas-menu -->
+            </ul>
+
+        
+    </nav>
+
+    <main>
+        <section id="principal">
+            <div id="container-jogadores">
+                <div id="add-player">
+    
+                    <div id="titulo-add">
+                        <h2>JOGADORES</h2>
+                    </div><!-- titulo-add -->
+                    <div id="jogadores-add">
+                        <textarea name="players-add" autofocus id="players-add" cols="30" rows="10" placeholder="Separe cada jogador por quebra de linha!"></textarea>
+                    </div><!-- jogadores-add -->
+                    <div id="button-add">
+                        <input type="button" value="ADICIONAR">
+                    </div><!-- button-add -->
+                </div><!-- add-player -->
+
+
+                <div id="player-list">
+                    <div id="jogadores-adicionados">
+                        <div id="grupo-jogadores">
+                            <p>Jogador</p>
+                            <p>Jogador</p>
+                            <p>Jogador</p>
+                            
+                        </div><!-- grupo-jogadores-nomes -->
+                    </div><!--jogadores-adicionados-->
+                    <div id="button-gerar">
+                        <button>
+                            <p>GERAR TIMES</p>
+                            <div id="button-gerar-limite">
+                                <span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-triangle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 9v2m0 4v.01" />
+                                    <path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75" />
+                                  </svg> Mínimo de 2 jogadores</span>
+                            </div>
+                        </button>
+                    </div>
+                </div><!-- player-list -->
+            </div><!-- container-jogadores -->
+        </section><!-- principal -->
+    </main>
+</body>
+</html>
