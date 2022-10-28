@@ -49,9 +49,67 @@ body {
     flex-direction: column;
 }
 
+/* TESTES */
+
+#teste-agentes {
+    max-width: 800px;
+    height: fit-content;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    padding: 20px;
+}
+
+.agente {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.agente img {
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    transition: .4s ease;
+}
+    /* ATIVO */
+    .ativo {
+        align-items: center;
+        border: 3px solid var(--verde);
+        
+        background: linear-gradient(25deg, var(--verde) 1%, transparent 70%);
+    }
+    
+    .ativo:hover img {
+        filter: saturate(0%);
+        transition: .4s ease;
+    }
+
+    /* INATIVO */
+    .inativo {
+        align-items: center;
+        border: 3px solid var(--vermelho);
+        
+        background: linear-gradient(25deg, var(--vermelho) 1%, transparent 70%);
+    }
+
+    .inativo img {
+        filter: saturate(0%);
+    }
+    
+    .inativo:hover img {
+        filter: saturate(100%);
+        transition: .4s ease;
+    }
+
+
 .underscore {
     border-bottom: 3px solid var(--vermelho);
 }
+/* TESTES */
 
 /* ---- margem vermelha ---- */
 

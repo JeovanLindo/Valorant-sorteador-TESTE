@@ -2,7 +2,7 @@
 
 const AGENTS = [
     'Fade', 'Neon', 'Chamber', 'Skye',
-    'Yoru', 'Astra', 'KAY/O', 'Phoenix',
+    'Yoru', 'Astra', 'KAY-O', 'Phoenix',
     'Raze', 'Brimstone', 'Jett', 'Sage',
     'Viper', 'Breach', 'Cypher', 'Sova',
     'Omen', 'Reyna', 'Killjoy', 'Harbor'
@@ -15,20 +15,39 @@ const MAPS = [
 
 const PLAYERS = []
 
+/* 
+<div class="agente ativo">
+    <img src="Assets/images/agents/Chamber_icon.png" alt="Chamber">
+</div> 
+*/
 
-function testeMapas() {
-    
+function loadAgents() {
+    AGENTS.forEach(agentName => {
+        const agentsSection = document.querySelector('#teste-agentes')
+        
+        // cria o container
+        const agentContainer = document.createElement('div')
+            agentContainer.classList.add('agente')
+            agentContainer.classList.add('ativo')
+        
+        // cria o icon
+        const agentIcon = document.createElement('img')
+            agentIcon.setAttribute('src', `Assets/images/agents/${agentName}_icon.png`)
+            agentIcon.setAttribute('alt', `${agentName}`)
+
+        // icon no container
+        agentContainer.appendChild(agentIcon)
+        // container na section
+        agentsSection.appendChild(agentContainer)
+
+        // adiciona classe de inativa
+        agentContainer.addEventListener('click', () => {
+            agentContainer.classList.toggle('inativo')
+        })
+    })
 }
 
-
-
-
-
-
-
-
-
-
+window.addEventListener('load', loadAgents)
 
 // FUNÇÕES
 
