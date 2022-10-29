@@ -347,7 +347,15 @@ main {
             width: 30px;
         }
 
-        #button-gerar button {
+        #button-gerar-container {
+            display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+        }
+
+        #button-gerar {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -365,7 +373,7 @@ main {
             transition: .2s;
         }
 
-        #button-gerar p {
+        #button-gerar-container p {
             height: 40px;
 
             color: white;
@@ -397,19 +405,50 @@ main {
         }
 
         /* button hover */
+        #limpar:hover {
+            stroke: var(--vermelho);
+            cursor: pointer;
+        }
 
-        #button-gerar button:hover {
+        /* SHAKE ANIMATION */
+        .shake-animation {
+            animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+          }
+        
+        @keyframes shake {
+            10%, 90% {
+            transform: translate3d(-1px, 0, 0);
+            }
+            
+            20%, 80% {
+            transform: translate3d(2px, 0, 0);
+            }
+        
+            30%, 50%, 70% {
+            transform: translate3d(-4px, 0, 0);
+            }
+        
+            40%, 60% {
+            transform: translate3d(4px, 0, 0);
+            }
+        }
+        /* SHAKE ANIMATION */
+
+        #button-gerar:hover {
             background-color: rgb(224, 220, 211);
             transition: .2s;
         }
 
         #button-gerar:hover span,
-        #button-gerar:hover p {
+        #button-gerar:hover p {          
             color: var(--preto-azulado);
             transition: .2s;
         }
 
-        #button-gerar:hover svg {
+        #button-gerar-container:hover button > svg {
             stroke: var(--preto-azulado);
             transition: .2s;
         }
@@ -418,18 +457,18 @@ main {
 
         /* button active */
 
-        #button-gerar button:active {
+        #button-gerar:active {
             background-color: black;
             transition: .2s;
         }
 
-        #button-gerar:active p,
-        #button-gerar:active span {
+        #button-gerar-container:active p,
+        #button-gerar-container:active span {
             color: white;
             transition: .2s;
         }
 
-        #button-gerar:active svg {
+        #button-gerar-container:active svg {
             stroke: white;
             transition: .2s;
         }

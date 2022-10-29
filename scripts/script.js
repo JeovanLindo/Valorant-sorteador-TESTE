@@ -15,12 +15,10 @@ const MAPS = [
 
 const PLAYERS = []
 
-/* 
-<div class="agente ativo">
-    <img src="Assets/images/agents/Chamber_icon.png" alt="Chamber">
-</div> 
-*/
 
+// FUNÇÃO AGENTES
+
+/* 
 function loadAgents() {
     AGENTS.forEach(agentName => {
         const agentsSection = document.querySelector('#teste-agentes')
@@ -48,6 +46,17 @@ function loadAgents() {
 }
 
 window.addEventListener('load', loadAgents)
+ */
+
+
+// FUNÇÃO MAPAS
+
+function loadMaps() {
+    MAPS.forEach(map => {
+        
+    })
+}
+
 
 // FUNÇÕES
 
@@ -56,13 +65,14 @@ function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)]
 }
 
+/* JOGADORES */
+
 function getPlayers(input) {
     // retorna um array com os nomes dos players
     return input.value.split(/,\s+|[\n]+/)
 }
 
 function insertPlayer(playerArray = []) {
-    console.log(PLAYERS)
 
     playerArray.forEach(name => {
         if (!!isPresent(name)) {
@@ -87,6 +97,25 @@ function insertPlayer(playerArray = []) {
     })
 }
 
+function clearPlayers() {
+    // limpa o array de jogadores
+    PLAYERS.length = 0
+
+    const groupPlayersInserted = document.querySelector('#grupo-jogadores')
+    const playersInserted = document.querySelectorAll('#grupo-jogadores > p')
+
+    playersInserted.forEach(player => {
+        groupPlayersInserted.removeChild(player)
+    })
+
+    // adicionar animação na lixeira
+    const clearButton = document.querySelector('#limpar')
+    clearButton.classList.add('shake-animation')
+    setTimeout(() => {
+        clearButton.classList.remove('shake-animation')
+    }, 800)
+}
+
 function removePlayer(player) {
     const addedPlayersGroup = document.querySelector('#grupo-jogadores')
 
@@ -95,6 +124,8 @@ function removePlayer(player) {
     // remove o player clicado do array
     PLAYERS.pop(PLAYERS.indexOf(player.target))
 }
+
+/* VERIFICADORA */
 
 function isPresent(player) {
     // verifica se o player já está presente no array
@@ -129,11 +160,40 @@ function isSufficient() {
     }
 }
 
+/* TIMES */
+
+function shuffleTeams(ogPlayerArray = []) {
+    let randomTeam = ogPlayerArray.slice()
+    let currentIndex = ogPlayerArray.length
+    let randomIndex
+  
+    // randomiza o array de jogadores
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [randomTeam[currentIndex], randomTeam[randomIndex]] = [randomTeam[randomIndex], randomTeam[currentIndex]];
+    }
+    
+    // copia da metade para final
+    const team1 = randomTeam.slice(randomTeam.length / 2, randomTeam.length)
+
+    // copia da inicio para metade
+    const team2 = randomTeam.slice(0, randomTeam.length / 2)
+
+    return {team1, team2}
+}
+
 // FUNÇÃO FINAL
 
 function generateTeams() {
     if (isSufficient()) {
+        // funcao de sortear times
         console.log('gerando times')
+        console.log(shuffleTeams(PLAYERS));
     }
 }
 
@@ -141,6 +201,7 @@ function addPlayer() {
     const playersInput = document.querySelector('textarea#players-add')
 
     insertPlayer(getPlayers(playersInput))
+    playersInput.value = ''
 }
 
 // EVENTOS
@@ -148,6 +209,10 @@ function addPlayer() {
 // adicionar jogadores
 const addPlayerButton = document.querySelector('#button-add')
 addPlayerButton.addEventListener('click', addPlayer)
+
+// limpar jogadores
+const clearButton = document.querySelector('#limpar')
+clearButton.addEventListener('click', clearPlayers)
 
 // gerar times
 const generateTeamsButton = document.querySelector('#button-gerar')
